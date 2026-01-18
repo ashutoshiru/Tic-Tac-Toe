@@ -54,4 +54,12 @@ const checkWinner = () => {
   }
 };
 
-
+reset.addEventListener("click", () => {
+  boxes.forEach((box) => {
+    box.innerText = "";
+    box.disabled = false;
+  });
+  turn = true;
+  Winner.innerText = "Winner is:-";
+  hide.classList.add("hide");
+});
